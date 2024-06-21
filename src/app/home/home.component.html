@@ -1,0 +1,36 @@
+<p>home works!</p>
+<div *ngFor="let item of traicay; let i = index">
+    <li>{{i+1}}.{{item}}</li>
+</div>
+<h3>hay dien tuoi cua ban</h3>
+<input type='text' [(ngModel)]="age" />
+<br />
+<input value="{{name}}" />
+
+<h2 [title]="'hallo'">Ban da {{age}} tuoi</h2>
+<!-- <h2 *ngIf="age <= 18" title="day la dau {{age}}">Ban tre qua </h2>
+<h2 *ngIf="age > 18">Ban gia qua </h2> -->
+<div *ngIf="age <=18; then tre; else gia"></div>
+<ng-template #tre>
+    <h2>Ban tre qua </h2>
+</ng-template>
+<ng-template #gia>
+    <h2>Ban gia qua </h2>
+</ng-template>
+<h1>chao ban {{name}}</h1>
+
+<button (click)="resetName()">dat lai ten</button>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>price</th>
+        <th>giam gia</th>
+    </tr>
+    <tr *ngFor="let trai of traicay1; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{trai.name}}</td>
+        <td>{{trai.price}}</td>
+        <td>{{trai.angebot}}</td>
+    </tr>
+</table>
