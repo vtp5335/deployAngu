@@ -37,4 +37,23 @@
 <div class="test">
     <h2>Day la component Home</h2>
     <p>Chao ban {{name}} </p>
+    <h3>nhap ten ban</h3>
+    <input type="text" [(ngModel)]="name" />
+    <br />
+    <!-- <input type="text" [(ngModel)]="name" />
+    <br />
+    <h3>nhap tuoi ban</h3>
+    <input value="{{age}}" />
+    <br />
+    <input />
+    <br />
+    <br />
+    <input type="number" [(ngModel)]="age" [title]="age +' la tuoi cua toi'  " />
+    <br />
+    <h4>chao ban {{name}} co tuoi la {{age}}</h4>
+    <input [value]="name" title="day la {{name}} cua toi" />
+    <h3 *ngIf="age > 18">ban gia qua</h3>
+    <h3 *ngIf="age < 18">ban tre qua</h3> -->
+    <button (click)="resetAge()">Reset age</button>
+
 </div>

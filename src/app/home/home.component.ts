@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -19,4 +20,9 @@ export class HomeComponent {
     this.name = ''
   } */
   public name = 'phan';
+  public age = 10;
+  public resetAge(): void {
+    /* console.log('resetAge'); */
+    this.name = '';
+  }
 }
