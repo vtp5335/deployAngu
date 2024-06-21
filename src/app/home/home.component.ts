@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public traicay = ['oi', 'cam', 'quit', 'buoi'];
+  /* public traicay = ['oi', 'cam', 'quit', 'buoi'];
   public traicay1 = [
     { name: 'oi', price: 4, angebot: true },
     { name: 'cam', price: 6, angebot: false },
@@ -17,5 +17,6 @@ export class HomeComponent {
   public resetName(): void {
     console.log('resetName')
     this.name = ''
-  }
+  } */
+  public name = 'phan';
 }
