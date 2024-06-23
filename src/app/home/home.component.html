@@ -54,6 +54,51 @@
     <input [value]="name" title="day la {{name}} cua toi" />
     <h3 *ngIf="age > 18">ban gia qua</h3>
     <h3 *ngIf="age < 18">ban tre qua</h3> -->
+    <h3>nhap tuoi cua ban</h3>
+    <input type="number" [(ngModel)]="age" />
+    <h2>oi troi oi. ban da {{age}} tuoi</h2>
+    <h1 *ngIf="age < 18; then tre; else gia"></h1>
+    <ng-template #gia>
+        <h4>Ban gia qua</h4>
+    </ng-template>
+    <ng-template #tre>
+        <h4>Ban tre qua</h4>
+    </ng-template>
     <button (click)="resetAge()">Reset age</button>
 
+</div>
+<div>
+    <h2>bang trai cay</h2>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Dai ha gia</th>
+        </tr>
+        <tr *ngFor="let trai of traicay; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{trai.name | lowercase}}</td>
+            <td [ngClass]="{'soAm': trai.price < 0}">{{trai.price | currency:'EUR'}}</td>
+            <td>{{trai.hagia | onSale |uppercase}}</td>
+        </tr>
+    </table>
+</div>
+<br />
+<div>
+    <label for="city">Choose a City:</label>
+
+    <select name="city" id="city" (change)="changeCity($event)">
+        <option *ngFor="let data of vietnamData" value="{{data.city}}">{{data.city}}</option>
+
+    </select>
+
+    <br />
+    <br />
+    <label for="district">Choose a District:</label>
+
+    <select name="district" id="district">
+        <option *ngFor="let district of districts" value="{{district}}">{{district}}</option>
+
+    </select>
 </div>
